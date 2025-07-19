@@ -1,0 +1,19 @@
+# Node modules
+node_modules
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+config.env
+
+# OS-specific files
+.DS_Store
+
+# Debug/coverage
+coverage/
+.vscode/
+
+# Build folders (if any)
+dist/
