@@ -1,6 +1,6 @@
 import React from "react";
 
-const Biography = ({imageUrl}) => {
+const Biography = ({ imageUrl }) => {
   return (
     <>
       <div className="container biography">
@@ -11,26 +11,26 @@ const Biography = ({imageUrl}) => {
           <p>Biography</p>
           <h3>Who We Are</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            Welcome to our Hospital Management System — a modern solution built
+            to simplify healthcare operations. Our mission is to connect
+            patients, doctors, and administrative staff through a seamless and
+            efficient platform. With a strong focus on security, accuracy, and
+            ease of use, we ensure that every appointment, report, and record is
+            handled with care.
           </p>
-          <p>We are all in 2024!</p>
-          <p>We are working on a MERN STACK PROJECT.</p>
+          <p>We are committed to healthcare innovation in 2024 and beyond!</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Our system is developed using the MERN Stack for speed, scalability,
+            and reliability.
           </p>
-          <p>Lorem ipsum dolor sit amet!</p>
-          <p>Coding is fun!</p>
+          <p>
+            From booking appointments to managing patient histories, our
+            application streamlines hospital workflows and improves patient
+            experiences. Real-time updates, secure authentication, and intuitive
+            design help medical staff focus more on care and less on paperwork.
+          </p>
+          <p>Your health, our priority — always.</p>
+          <p>Because in healthcare, every second matters!</p>
         </div>
       </div>
     </>
