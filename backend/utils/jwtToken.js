@@ -12,7 +12,8 @@ export const generateToken = (user, message, statusCode, res) => {
       httpOnly: true,
       secure: true,        
       sameSite: 'None',    
-      crossOrigin: true   
+      crossOrigin: true,
+       path: "/"
     })
     .json({
       success: true,

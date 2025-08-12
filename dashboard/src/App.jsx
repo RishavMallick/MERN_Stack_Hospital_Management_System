@@ -27,9 +27,7 @@ const App = () => {
       try {
         const response = await axios.get(
           `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/admin/me`,
-          {
-            withCredentials: true,
-          }
+          { withCredentials: true }
         );
         setIsAuthenticated(true);
         setAdmin(response.data.user);
@@ -38,19 +36,50 @@ const App = () => {
         setAdmin({});
       }
     };
+
     fetchUser();
-  }, [isAuthenticated]);
+  }, []); 
 
   return (
     <Router>
-      <Sidebar />
+      {isAuthenticated && <Sidebar />}
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/doctor/addnew" element={<AddNewDoctor />} />
-        <Route path="/admin/addnew" element={<AddNewAdmin />} />
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/doctors" element={<Doctors />} />
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? <Dashboard /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            !isAuthenticated ? <Login /> : <Navigate to="/" replace />
+          }
+        />
+        <Route
+          path="/doctor/addnew"
+          element={
+            isAuthenticated ? <AddNewDoctor /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/admin/addnew"
+          element={
+            isAuthenticated ? <AddNewAdmin /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/messages"
+          element={
+            isAuthenticated ? <Messages /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/doctors"
+          element={
+            isAuthenticated ? <Doctors /> : <Navigate to="/login" replace />
+          }
+        />
       </Routes>
       <ToastContainer position="top-center" />
     </Router>
