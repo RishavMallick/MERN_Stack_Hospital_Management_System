@@ -61,9 +61,7 @@ const Dashboard = () => {
                 <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5>
               </div>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facilis, nam molestias. Eaque molestiae ipsam commodi neque.
-                Assumenda repellendus necessitatibus itaque.
+                ZeeCare Medical Institute is an integrated hospital management platform designed to simplify patient tracking, appointment scheduling, and departmental coordination efficiently.
               </p>
             </div>
           </div>
