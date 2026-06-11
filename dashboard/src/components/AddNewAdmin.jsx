@@ -23,12 +23,12 @@ const AddNewAdmin = () => {
     try {
       await axios
         .post(
-          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/admin/me/api/v1/user/admin/addnew`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/admin/addnew`,
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
-          }
+          },
         )
         .then((res) => {
           toast.success(res.data.message);
@@ -55,7 +55,7 @@ const AddNewAdmin = () => {
   return (
     <section className="page">
       <section className="container form-component add-admin-form">
-      <img src="/logo.png" alt="logo" className="logo"/>
+        <img src="/logo.png" alt="logo" className="logo" />
         <h1 className="form-title">ADD NEW ADMIN</h1>
         <form onSubmit={handleAddNewAdmin}>
           <div>
